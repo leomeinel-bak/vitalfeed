@@ -17,7 +17,7 @@
 <h3 align="center">VitalFeed</h3>
 
   <p align="center">
-    Fly on Spigot and Paper
+    Feed players on Spigot and Paper
     <br />
     <a href="https://github.com/TamrielNetwork/VitalFeed"><strong>Explore the docs »</strong></a>
     <br />
@@ -68,11 +68,8 @@ This plugin is perfect for any server wanting to give their players some ease of
 
 ### Features
 
-* Toggle fly on and off for command sender and other players
-* Set fly speed for command sender and other players
-* Keep fly on world change
-* Keep fly toggled on rejoin when player is falling
-* Keep fly toggled when player changes back to survival
+* Feed yourself
+* Feed others
 
 ### Built With
 
