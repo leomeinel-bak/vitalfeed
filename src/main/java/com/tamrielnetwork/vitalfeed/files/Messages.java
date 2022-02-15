@@ -16,22 +16,35 @@
  * along with this program. If not, see https://github.com/TamrielNetwork/VitalFeed/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalfly.listeners;
+package com.tamrielnetwork.vitalfeed.files;
 
-import com.tamrielnetwork.vitalfly.utils.Utils;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChangedWorldEvent;
+import com.tamrielnetwork.vitalfeed.VitalFeed;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public class PlayerChangeWorld implements Listener {
-	@EventHandler
-	public void onPlayerChangeWorld(PlayerChangedWorldEvent event) {
-		if (!event.getPlayer().hasPermission("vitalfly.fly") || !event.getPlayer().hasPermission("vitalfly.fly.worldchange")) {
-			return;
+import java.io.File;
+
+public class Messages {
+
+	private final VitalFeed main = JavaPlugin.getPlugin(VitalFeed.class);
+	private final File messagesFile;
+	private final FileConfiguration messagesConf;
+
+	public Messages() {
+		messagesFile = new File(main.getDataFolder(), "messages.yml");
+		saveMessagesFile();
+		messagesConf = YamlConfiguration.loadConfiguration(messagesFile);
+	}
+
+	private void saveMessagesFile() {
+		if (!messagesFile.exists()) {
+			main.saveResource("messages.yml", false);
 		}
-		event.getPlayer().setAllowFlight(true);
-		Utils.sendMessage(event.getPlayer(), "now-flying");
+	}
 
+	public FileConfiguration getMessagesConf() {
+		return messagesConf;
 	}
 
 }
