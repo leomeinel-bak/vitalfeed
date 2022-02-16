@@ -39,12 +39,12 @@ public class VitalFeedCmd implements CommandExecutor {
 			return true;
 		}
 		// Toggle Crafting Interface
-		setFoodLevel(sender, args);
+		feedPlayer(sender, args);
 		return true;
 
 	}
 
-	private void setFoodLevel(CommandSender sender, String[] args) {
+	private void feedPlayer(CommandSender sender, String[] args) {
 		// Check if command sender is a player
 		if (!(sender instanceof Player)) {
 			Utils.sendMessage(sender, "player-only");
