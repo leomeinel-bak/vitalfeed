@@ -38,7 +38,7 @@ public class CmdSpec {
 	}
 
 	public static void doFeed(@NotNull Player senderPlayer) {
-		Chat.sendMessage(senderPlayer,"fed");
+		Chat.sendMessage(senderPlayer, "fed");
 		senderPlayer.setFoodLevel(20);
 	}
 }
