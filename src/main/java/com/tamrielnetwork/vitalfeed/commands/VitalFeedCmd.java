@@ -18,8 +18,8 @@
 
 package com.tamrielnetwork.vitalfeed.commands;
 
-import com.google.common.collect.ImmutableMap;
-import com.tamrielnetwork.vitalfeed.utils.Utils;
+import com.tamrielnetwork.vitalfeed.utils.commands.Cmd;
+import com.tamrielnetwork.vitalfeed.utils.commands.CmdSpec;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -27,57 +27,41 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Objects;
-
 public class VitalFeedCmd implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-		// Check args length
-		if (args.length > 1) {
-			Utils.sendMessage(sender, "invalid-option");
+
+		if (Cmd.isArgsLengthGreaterThan(sender, args, 1)) {
 			return true;
 		}
-		// Toggle Crafting Interface
-		feedPlayer(sender, args);
+
+		doFeed(sender, args);
 		return true;
 
 	}
 
-	private void feedPlayer(CommandSender sender, String[] args) {
-		// Check if command sender is a player
-		if (!(sender instanceof Player)) {
-			Utils.sendMessage(sender, "player-only");
-			return;
-		}
-		// Check perms
-		if (!sender.hasPermission("vitalfeed.feed")) {
-			Utils.sendMessage(sender, "no-perms");
+	private void doFeed(@NotNull CommandSender sender, @NotNull String[] args) {
+		Player senderPlayer = (Player) sender;
+		if (Cmd.isInvalidSender(sender)) {
 			return;
 		}
 
-		// Check args length
 		if (args.length == 1) {
-			// Check perms
-			if (!sender.hasPermission("vitalfeed.feed.others")) {
-				Utils.sendMessage(sender, "no-perms");
-				return;
-			}
-			if (Bukkit.getPlayer(args[0]) == null) {
-				Utils.sendMessage(sender, "invalid-player");
-				return;
-			}
 			Player player = Bukkit.getPlayer(args[0]);
-			boolean isOnline = Objects.requireNonNull(player).isOnline();
-			if (!isOnline) {
-				Utils.sendMessage(sender, "not-online");
+
+			if (CmdSpec.isInvalidCmd(senderPlayer, player, "vitalfeed.feed.others")) {
 				return;
 			}
-			Utils.sendMessage(sender, ImmutableMap.of("%player%", player.getName()), "player-fed");
-			player.setFoodLevel(20);
+
+			assert player != null;
+
+			CmdSpec.doFeed(senderPlayer, player);
 			return;
 		}
-		Utils.sendMessage(sender,"fed");
-		((Player) sender).setFoodLevel(20);
+		if (Cmd.isNotPermitted(sender, "vitalfeed.feed")) {
+			return;
+		}
+		CmdSpec.doFeed(senderPlayer);
 	}
 }
