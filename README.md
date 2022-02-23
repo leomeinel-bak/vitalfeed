@@ -62,7 +62,7 @@
 
 ### Description
 
-VitalFeed is a  Plugin that gives players the ability to fill their hunger.
+VitalFeed is a Plugin that gives players the ability to fill their hunger.
 
 This plugin is perfect for any server wanting to give their players some ease of life.
 

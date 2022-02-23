@@ -42,10 +42,11 @@ public class VitalFeedCmd implements CommandExecutor {
 	}
 
 	private void doFeed(@NotNull CommandSender sender, @NotNull String[] args) {
-		Player senderPlayer = (Player) sender;
+
 		if (Cmd.isInvalidSender(sender)) {
 			return;
 		}
+		Player senderPlayer = (Player) sender;
 
 		if (args.length == 1) {
 			Player player = Bukkit.getPlayer(args[0]);
@@ -64,4 +65,5 @@ public class VitalFeedCmd implements CommandExecutor {
 		}
 		CmdSpec.doFeed(senderPlayer);
 	}
+
 }

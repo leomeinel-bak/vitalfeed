@@ -52,6 +52,7 @@ public final class VitalFeed extends JavaPlugin {
 	}
 
 	public Messages getMessages() {
+
 		return messages;
 	}
 
