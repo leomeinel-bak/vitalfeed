@@ -86,12 +86,12 @@ To get the plugin running on your server follow these simple steps.
 
 1. Permission: `vitalfeed.feed`
 
-* Command: `/vitalfeed`
+* Command: `/feed`
 * Description: Feed yourself
 
 2. Permission: `vitalfeed.feed.others`
 
-* Command: `/vitalfeed <player>`
+* Command: `/feed <player>`
 * Description: Feed other players
 
 ### Configuration - config.yml

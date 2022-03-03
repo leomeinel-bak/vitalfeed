@@ -32,7 +32,7 @@ public final class VitalFeed extends JavaPlugin {
 	@Override
 	public void onEnable() {
 
-		Objects.requireNonNull(getCommand("vitalfeed")).setExecutor(new VitalFeedCmd());
+		Objects.requireNonNull(getCommand("feed")).setExecutor(new VitalFeedCmd());
 
 		saveDefaultConfig();
 

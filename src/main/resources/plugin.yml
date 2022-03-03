@@ -8,11 +8,14 @@ description: Gives players the ability to fill their hunger.
 commands:
   vitalfeed:
     description: "Main command"
-    usage: "/vitalfeed"
+    usage: "/feed <player>"
 permissions:
   vitalfeed.feed:
     description: "Permission to feed yourself"
     default: op
   vitalfeed.feed.others:
     description: "Permission to feed other players"
+    default: op
+  vitalfeed.cooldown.bypass:
+    description: "Permission to bypass cooldown"
     default: op

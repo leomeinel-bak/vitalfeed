@@ -60,7 +60,7 @@ public class VitalFeedCmd implements CommandExecutor {
 			CmdSpec.doFeed(senderPlayer, player);
 			return;
 		}
-		if (Cmd.isNotPermitted(sender, "vitalfeed.feed")) {
+		if (CmdSpec.isInvalidCmd(sender, "vitalfeed.feed")) {
 			return;
 		}
 		CmdSpec.doFeed(senderPlayer);
