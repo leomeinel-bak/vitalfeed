@@ -6,7 +6,7 @@ authors: [ Tamriel Network ]
 website: https://tamriel.site
 description: Gives players the ability to fill their hunger.
 commands:
-  vitalfeed:
+  feed:
     description: "Main command"
     usage: "/feed <player>"
 permissions:
