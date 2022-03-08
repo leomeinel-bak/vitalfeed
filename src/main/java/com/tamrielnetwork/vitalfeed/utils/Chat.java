@@ -33,6 +33,11 @@ public class Chat {
 
 	private static final VitalFeed main = JavaPlugin.getPlugin(VitalFeed.class);
 
+	private Chat() {
+
+		throw new IllegalStateException("Utility class");
+	}
+
 	public static void sendMessage(@NotNull CommandSender player, @NotNull Map<String, String> placeholders, @NotNull String message) {
 
 		List<String> messages = getMessages(message);
