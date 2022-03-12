@@ -27,36 +27,30 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class VitalFeedCmd implements CommandExecutor {
+public class VitalFeedCmd
+		implements CommandExecutor {
 
 	@Override
-	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-
+	public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label,
+	                         @NotNull String[] args) {
 		if (Cmd.isArgsLengthGreaterThan(sender, args, 1)) {
 			return false;
 		}
-
 		doFeed(sender, args);
 		return true;
-
 	}
 
 	private void doFeed(@NotNull CommandSender sender, @NotNull String[] args) {
-
 		if (Cmd.isInvalidSender(sender)) {
 			return;
 		}
 		Player senderPlayer = (Player) sender;
-
 		if (args.length == 1) {
 			Player player = Bukkit.getPlayer(args[0]);
-
 			if (CmdSpec.isInvalidCmd(senderPlayer, player, "vitalfeed.feed.others")) {
 				return;
 			}
-
 			assert player != null;
-
 			CmdSpec.doFeed(senderPlayer, player);
 			return;
 		}
@@ -65,5 +59,4 @@ public class VitalFeedCmd implements CommandExecutor {
 		}
 		CmdSpec.doFeed(senderPlayer);
 	}
-
 }

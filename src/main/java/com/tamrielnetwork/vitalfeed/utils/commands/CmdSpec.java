@@ -36,12 +36,10 @@ public class CmdSpec {
 	private static final HashMap<UUID, Long> cooldownMap = new HashMap<>();
 
 	private CmdSpec() {
-
 		throw new IllegalStateException("Utility class");
 	}
 
 	public static boolean isInvalidCmd(@NotNull CommandSender sender, Player player, @NotNull String perm) {
-
 		if (Cmd.isNotPermitted(sender, perm)) {
 			return true;
 		}
@@ -52,7 +50,6 @@ public class CmdSpec {
 	}
 
 	public static boolean isInvalidCmd(@NotNull CommandSender sender, @NotNull String perm) {
-
 		if (Cmd.isNotPermitted(sender, perm)) {
 			return true;
 		}
@@ -60,49 +57,43 @@ public class CmdSpec {
 	}
 
 	public static void doFeed(@NotNull CommandSender sender, @NotNull Player player) {
-
 		Chat.sendMessage(sender, Map.of("%player%", player.getName()), "player-fed");
 		player.setFoodLevel(20);
 	}
 
 	public static void doFeed(@NotNull Player senderPlayer) {
-
 		Chat.sendMessage(senderPlayer, "fed");
 		senderPlayer.setFoodLevel(20);
 	}
 
 	private static void clearMap(@NotNull CommandSender sender) {
-
 		Player senderPlayer = (Player) sender;
 		cooldownMap.remove(senderPlayer.getUniqueId());
 	}
 
 	private static void doTiming(@NotNull CommandSender sender) {
-
 		new BukkitRunnable() {
 
 			@Override
 			public void run() {
-
 				clearMap(sender);
 			}
-		}.runTaskLaterAsynchronously(main, (main.getConfig().getLong("cooldown.time") * 20L));
+		}.runTaskLaterAsynchronously(main, (main.getConfig()
+		                                        .getLong("cooldown.time") * 20L));
 	}
 
 	private static boolean isOnCooldown(@NotNull CommandSender sender) {
-
 		Player senderPlayer = (Player) sender;
-
-		boolean isOnCooldown = main.getConfig().getBoolean("cooldown.enabled") && !sender.hasPermission("vitalfeed.cooldown.bypass") && cooldownMap.containsKey(senderPlayer.getUniqueId());
-
+		boolean isOnCooldown = main.getConfig()
+		                           .getBoolean("cooldown.enabled") && !sender.hasPermission("vitalfeed.cooldown.bypass") && cooldownMap.containsKey(senderPlayer.getUniqueId());
 		if (isOnCooldown) {
 			String timeRemaining = String.valueOf(cooldownMap.get(senderPlayer.getUniqueId()) - System.currentTimeMillis() / 1000);
 			Chat.sendMessage(sender, Map.of("%time-left%", timeRemaining), "cooldown-active");
 			return true;
 		}
-		cooldownMap.put(senderPlayer.getUniqueId(), main.getConfig().getLong("cooldown.time") + System.currentTimeMillis() / 1000);
+		cooldownMap.put(senderPlayer.getUniqueId(), main.getConfig()
+		                                                .getLong("cooldown.time") + System.currentTimeMillis() / 1000);
 		doTiming(sender);
 		return false;
 	}
-
 }
