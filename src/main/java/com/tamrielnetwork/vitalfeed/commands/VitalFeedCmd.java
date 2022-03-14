@@ -18,6 +18,7 @@
 
 package com.tamrielnetwork.vitalfeed.commands;
 
+import com.tamrielnetwork.vitalfeed.utils.Chat;
 import com.tamrielnetwork.vitalfeed.utils.commands.Cmd;
 import com.tamrielnetwork.vitalfeed.utils.commands.CmdSpec;
 import org.bukkit.Bukkit;
@@ -26,6 +27,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Map;
 
 public class VitalFeedCmd
 		implements CommandExecutor {
@@ -51,12 +54,14 @@ public class VitalFeedCmd
 				return;
 			}
 			assert player != null;
-			CmdSpec.doFeed(senderPlayer, player);
+			Chat.sendMessage(sender, Map.of("%player%", player.getName()), "player-fed");
+			player.setFoodLevel(20);
 			return;
 		}
 		if (CmdSpec.isInvalidCmd(sender, "vitalfeed.feed")) {
 			return;
 		}
-		CmdSpec.doFeed(senderPlayer);
+		Chat.sendMessage(senderPlayer, "fed");
+		senderPlayer.setFoodLevel(20);
 	}
 }
