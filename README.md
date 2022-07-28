@@ -10,7 +10,7 @@
 <!--suppress ALL -->
 <br />
 <p align="center">
-  <a href="https://github.com/TamrielNetwork/VitalFeed">
+  <a href="https://github.com/LeoMeinel/VitalFeed">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -19,14 +19,14 @@
   <p align="center">
     Feed players on Spigot and Paper
     <br />
-    <a href="https://github.com/TamrielNetwork/VitalFeed"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/LeoMeinel/VitalFeed"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/TamrielNetwork/VitalFeed">View Demo</a>
+    <a href="https://github.com/LeoMeinel/VitalFeed">View Demo</a>
     ·
-    <a href="https://github.com/TamrielNetwork/VitalFeed/issues">Report Bug</a>
+    <a href="https://github.com/LeoMeinel/VitalFeed/issues">Report Bug</a>
     ·
-    <a href="https://github.com/TamrielNetwork/VitalFeed/issues">Request Feature</a>
+    <a href="https://github.com/LeoMeinel/VitalFeed/issues">Request Feature</a>
   </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -126,7 +126,7 @@ cooldown-active: "&cYou can't use that command for another &b%time-left% &csecon
 
 ## Roadmap
 
-See the [open issues](https://github.com/TamrielNetwork/VitalFeed/issues) for a list of proposed features (and known
+See the [open issues](https://github.com/LeoMeinel/VitalFeed/issues) for a list of proposed features (and known
 issues).
 
 <!-- CONTRIBUTING -->
@@ -156,7 +156,7 @@ Leopold Meinel - [@TamrielN](https://twitter.com/TamrielN) - Twitter
 
 Leopold Meinel - [contact@tamriel.me](mailto:contact@tamriel.me) - eMail
 
-Project Link - [VitalFeed](https://github.com/TamrielNetwork/VitalFeed) - GitHub
+Project Link - [VitalFeed](https://github.com/LeoMeinel/VitalFeed) - GitHub
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -166,26 +166,26 @@ Project Link - [VitalFeed](https://github.com/TamrielNetwork/VitalFeed) - GitHub
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors-anon/TamrielNetwork/VitalFeed?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/VitalFeed?style=for-the-badge
 
-[contributors-url]: https://github.com/TamrielNetwork/VitalFeed/graphs/contributors
+[contributors-url]: https://github.com/LeoMeinel/VitalFeed/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/TamrielNetwork/VitalFeed?label=Forks&style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/LeoMeinel/VitalFeed?label=Forks&style=for-the-badge
 
-[forks-url]: https://github.com/TamrielNetwork/VitalFeed/network/members
+[forks-url]: https://github.com/LeoMeinel/VitalFeed/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/TamrielNetwork/VitalFeed?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/LeoMeinel/VitalFeed?style=for-the-badge
 
-[stars-url]: https://github.com/TamrielNetwork/VitalFeed/stargazers
+[stars-url]: https://github.com/LeoMeinel/VitalFeed/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/TamrielNetwork/VitalFeed?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/LeoMeinel/VitalFeed?style=for-the-badge
 
-[issues-url]: https://github.com/TamrielNetwork/VitalFeed/issues
+[issues-url]: https://github.com/LeoMeinel/VitalFeed/issues
 
-[license-shield]: https://img.shields.io/github/license/TamrielNetwork/VitalFeed?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/LeoMeinel/VitalFeed?style=for-the-badge
 
-[license-url]: https://github.com/TamrielNetwork/VitalFeed/blob/main/LICENSE
+[license-url]: https://github.com/LeoMeinel/VitalFeed/blob/main/LICENSE
 
-[quality-shield]: https://img.shields.io/codefactor/grade/github/TamrielNetwork/VitalFeed?style=for-the-badge
+[quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/VitalFeed?style=for-the-badge
 
-[quality-url]: https://www.codefactor.io/repository/github/TamrielNetwork/VitalFeed
+[quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/VitalFeed
