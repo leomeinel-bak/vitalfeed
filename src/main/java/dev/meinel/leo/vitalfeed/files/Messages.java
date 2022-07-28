@@ -16,9 +16,9 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalFeed/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalfeed.files;
+package dev.meinel.leo.vitalfeed.files;
 
-import com.tamrielnetwork.vitalfeed.VitalFeed;
+import dev.meinel.leo.vitalfeed.VitalFeed;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

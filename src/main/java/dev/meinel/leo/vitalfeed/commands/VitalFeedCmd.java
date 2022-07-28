@@ -16,11 +16,11 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalFeed/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalfeed.commands;
+package dev.meinel.leo.vitalfeed.commands;
 
-import com.tamrielnetwork.vitalfeed.utils.Chat;
-import com.tamrielnetwork.vitalfeed.utils.commands.Cmd;
-import com.tamrielnetwork.vitalfeed.utils.commands.CmdSpec;
+import dev.meinel.leo.vitalfeed.utils.Chat;
+import dev.meinel.leo.vitalfeed.utils.commands.Cmd;
+import dev.meinel.leo.vitalfeed.utils.commands.CmdSpec;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

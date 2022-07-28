@@ -16,9 +16,9 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalFeed/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalfeed.utils.commands;
+package dev.meinel.leo.vitalfeed.utils.commands;
 
-import com.tamrielnetwork.vitalfeed.utils.Chat;
+import dev.meinel.leo.vitalfeed.utils.Chat;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;

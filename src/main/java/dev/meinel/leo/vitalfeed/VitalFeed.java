@@ -16,10 +16,10 @@
  * along with this program. If not, see https://github.com/LeoMeinel/VitalFeed/blob/main/LICENSE
  */
 
-package com.tamrielnetwork.vitalfeed;
+package dev.meinel.leo.vitalfeed;
 
-import com.tamrielnetwork.vitalfeed.commands.VitalFeedCmd;
-import com.tamrielnetwork.vitalfeed.files.Messages;
+import dev.meinel.leo.vitalfeed.commands.VitalFeedCmd;
+import dev.meinel.leo.vitalfeed.files.Messages;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 

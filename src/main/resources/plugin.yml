@@ -1,6 +1,6 @@
 name: VitalFeed
 version: @version@
-main: com.tamrielnetwork.vitalfeed.VitalFeed
+main: dev.meinel.leo.vitalfeed.VitalFeed
 api-version: 1.17
 authors: [ Leopold Meinel ]
 description: Gives players the ability to fill their hunger.
