@@ -1,4 +1,5 @@
 <!-- PROJECT SHIELDS -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -69,13 +70,13 @@ This plugin is perfect for any server wanting to give their players some ease of
 
 ### Features
 
-* Feed yourself
-* Feed others
+- Feed yourself
+- Feed others
 
 ### Built With
 
-* [Gradle 7](https://docs.gradle.org/7.4/release-notes.html)
-* [OpenJDK 17](https://openjdk.java.net/projects/jdk/17/)
+- [Gradle 7](https://docs.gradle.org/7.4/release-notes.html)
+- [OpenJDK 17](https://openjdk.java.net/projects/jdk/17/)
 
 <!-- GETTING STARTED -->
 
@@ -87,17 +88,17 @@ To get the plugin running on your server follow these simple steps.
 
 1. Permission: `vitalfeed.feed`
 
-* Command: `/feed`
-* Description: Feed yourself
+- Command: `/feed`
+- Description: Feed yourself
 
 2. Permission: `vitalfeed.feed.others`
 
-* Command: `/feed <player>`
-* Description: Feed other players
+- Command: `/feed <player>`
+- Description: Feed other players
 
 3. Permission: `vitalfeed.cooldown.bypass`
 
-* Description: Bypass cooldown
+- Description: Bypass cooldown
 
 ### Configuration - config.yml
 
@@ -160,30 +161,19 @@ Project Link - [VitalFeed](https://github.com/LeoMeinel/VitalFeed) - GitHub
 
 ### Acknowledgements
 
-* [README.md - othneildrew](https://github.com/othneildrew/Best-README-Template)
+- [README.md - othneildrew](https://github.com/othneildrew/Best-README-Template)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors-anon/LeoMeinel/VitalFeed?style=for-the-badge
-
 [contributors-url]: https://github.com/LeoMeinel/VitalFeed/graphs/contributors
-
 [forks-shield]: https://img.shields.io/github/forks/LeoMeinel/VitalFeed?label=Forks&style=for-the-badge
-
 [forks-url]: https://github.com/LeoMeinel/VitalFeed/network/members
-
 [stars-shield]: https://img.shields.io/github/stars/LeoMeinel/VitalFeed?style=for-the-badge
-
 [stars-url]: https://github.com/LeoMeinel/VitalFeed/stargazers
-
 [issues-shield]: https://img.shields.io/github/issues/LeoMeinel/VitalFeed?style=for-the-badge
-
 [issues-url]: https://github.com/LeoMeinel/VitalFeed/issues
-
 [license-shield]: https://img.shields.io/github/license/LeoMeinel/VitalFeed?style=for-the-badge
-
 [license-url]: https://github.com/LeoMeinel/VitalFeed/blob/main/LICENSE
-
 [quality-shield]: https://img.shields.io/codefactor/grade/github/LeoMeinel/VitalFeed?style=for-the-badge
-
 [quality-url]: https://www.codefactor.io/repository/github/LeoMeinel/VitalFeed
